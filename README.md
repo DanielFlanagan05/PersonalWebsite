@@ -1,4 +1,7 @@
-# [Web Application Development](https://gitlab.msu.edu/cse477-spring-2024/course-materials/): Homework 3
+# [Personal Website] www.dflanagan.dev
+
+## Initial Commit Notes:
+This version of the codebase is directly taken from the finalized version of the website in spring 2024, when my web development class ended. This is my own work, though it has artifacts from what was provided by my professor, including this current README. Rather than recreate the entire website, I intend on updating what I already have created. As it evolves into something new from what the class assignment was 16 months ago, I will be subsequently removing many of these artifacts and my professors notes (as they are no longer relevant of course). 
 
 
 
