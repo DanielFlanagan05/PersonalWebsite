@@ -1,0 +1,85 @@
+/* Feedback Form styling */
+.feedback-form {
+  display: none; 
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: #000000; 
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
+}
+
+
+.feedback-form div {
+  margin-bottom: 10px; 
+}
+
+label {
+  color: #ccc; 
+}
+/* Input and Button Styling */
+input[name="name"],
+input[name="email"]
+{
+  width: 90%; 
+  padding: 10px; 
+  margin-top: 5px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+
+textarea[name="comment"] {
+  width: 90%; 
+  padding: 10px; 
+  margin-top: 5px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  height: 100px; 
+  resize: none;
+}
+
+
+button[type="submit"] {
+  background-color: #4CAF50; 
+  color: white; 
+  cursor: pointer; 
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049; 
+}
+
+#feedbackButton {
+  position: fixed; 
+  right: 0; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  background-color: #000500; 
+  color: #ccc; 
+  cursor: pointer; 
+  padding: 10px; 
+  border: none; 
+  border-radius: 5px 0 0 5px; 
+  writing-mode: vertical-lr; 
+  text-orientation: mixed; 
+  height: 80px;
+  width: 30px;
+}
+
+.feedback-page h1
+{
+  text-align: center;
+  margin-bottom: 8vh; 
+  padding-left: 40px;
+}
+
+.feedback-name {
+  font-weight: bold; 
+}

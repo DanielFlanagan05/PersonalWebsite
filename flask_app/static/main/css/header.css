@@ -1,0 +1,29 @@
+/* Defines the area for the header */
+header {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 100px; 
+    min-height: 50px;
+    height: 10vh;
+}
+
+/* Fit the image to the header area */
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Remove white space around image */
+html, body {
+    margin: 0;
+    padding: 0;
+    /* Below lines were added so html and body could be used as parent elements that filled window.
+    However it seemed to be unnecessary, so removed for now. Body is set to 100vh in main
+    where it is more relevant */
+    /* width: 100%;
+    height: 100%; */
+}
+

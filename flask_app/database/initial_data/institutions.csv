@@ -1,0 +1,4 @@
+inst_id,type,name,department,address,city,state,zip
+1,Business Consulting,AlixPartners,Corporate Services,Remote,NULL,NULL,NULL
+2,Community Service,Boys and Girls Club,NULL,NULL,Royal Oak,Michigan,NULL
+3,University,Michigan State University,Computer Science,NULL,East Lansing,Michigan,NULL

@@ -1,0 +1,62 @@
+/* styles.css */
+
+.institution-info 
+{
+    margin-left: 30px;
+    color: #5a5858;
+    font-style: italic;
+}
+
+.position-title
+{
+    font-size: 0.8em;
+    color: #000;
+}
+
+.position-date, .responsibilities
+{
+    margin-left: 30px;
+}
+
+.position-date
+{
+    color: #5a5858;
+    font-style: italic;
+}
+
+.experiences-header
+{
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+
+.experiences-and-skills
+{
+    margin-left: 30px;
+}
+
+.experiences-and-skills p
+{
+    margin-left: 20px;
+}
+
+.skills ul
+{
+    padding-inline-start: 30px;
+}
+
+.skills li
+{
+    margin-left: 40px;
+}
+
+.skills h1
+{
+    font-size: 1.2em;
+    margin-left: 0px;
+}
+
+.experience-description
+{
+    margin-left: 30px;
+}

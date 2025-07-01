@@ -1,0 +1,24 @@
+/* Turns rest of page into a flex column where footer is the last row */
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Positions footer, and defines location for text */
+footer {
+    width: 100%;
+    height: 6vh;
+    background-color: #74a9c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style's the text in footer*/
+footer p {
+    margin: 0;
+    padding: 0;
+    color: #837b7b;
+    text-align: justify;
+}

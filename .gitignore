@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# Environment variables / secrets
+*.env
+.env.*
+!keep/.env.example  # Optional: keep an example env file
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled files
+*.egg-info/
+dist/
+build/
+
+# Docker
+**/docker-compose.override.yml
+**/.docker/
+
+# Local configuration files
+config.local.yml
+
+# Test coverage
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# pyright or other type checker output
+typings/
+
+# Node modules (if you have any JS frontend)
+node_modules/
+
+# Google Cloud credentials
+*.json  # e.g., gcloud credentials

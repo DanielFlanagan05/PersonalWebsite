@@ -1,0 +1,17 @@
+{% extends 'shared/layout.html' %}
+{% block maincontent %}
+<div class="feedback-page">
+<h1>Thanks for your feedback - here's what others had to say:</h1>
+    <div class="feedback-container">
+        {% for feedback in feedback_list %}
+            <div class="feedback-entry">
+                <p><span class="feedback-name">{{ feedback.name }}</span>
+                     said: {{ feedback.comment }}</p>
+                <!-- Choosing not to display email -->
+                <!-- <p><strong>Email:</strong> {{ feedback.email }}</p> -->
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

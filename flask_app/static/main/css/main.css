@@ -1,0 +1,129 @@
+/* FILEPATH: /c:/Users/danfl/Documents/School/CSE 477/flana107/homework/Homework-1/flask_app/static/main/css/main.css */
+
+/* Allows body to be a parent element that takes 100% of the view. */
+body {
+    display: flex;
+    flex-direction: column; /* Used to contain and align the footer to the bottom of the page */
+    min-height: 100vh; 
+}
+
+/* Sets the height and width for main (parent of all other elements here). Also sets
+margin values to align children to center.  */
+main {
+    min-height: 50vh; 
+    width: 80vw;
+    margin-top: 30px;
+    margin-left: 10vw;
+
+    /* Overflow controlled here when screen size < 650px */
+    overflow: hidden;  
+
+}
+
+/* Creates a flex "box" divided as a row. Height affects the image,
+Does not seem to effect the text due to the way overflow is handled for it */
+.main-row{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sets both columns within the row to an equal fraction of the row (1/2) */
+.main-col{
+    flex: 1;
+}
+
+/* Handles overflow with a scroll bar, sets a maximum height (seems to be necessary to 
+handle overflow with a scroll bar) */
+.description {
+    overflow: auto;
+    height: 50vh;
+    text-align: justify; /* aligns horizontally by padding lines to make them all appear even length */
+
+    /* Does not appear to change anything due to text alignment being 
+    justified, but included to meet requirement of centered text (should center text along horizonal
+    axis) */
+    justify-content: center; 
+
+    /* Margin and padding used to add a small amount of whitespace around the text for readability */
+    margin: 0 8px;
+    padding: 0 8px;
+}
+
+/* Styles the name in the span tag to appear like a header */
+.inline-header {
+    font-size: 2em; 
+    font-weight: bold; 
+}
+
+/* Adjusts image to fit the column */
+.main-col img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Styles line between image + description and the fun fact */
+hr {
+    /* 20 pixels of margin above and below line, centers line within the main element */
+    margin: 20px auto;
+    width: 80vw;
+    height: 1px;
+    background-color: #302e2e40;
+    border: none;
+}
+
+/* Aligns the fun fact in the center of the main element */
+.fun-fact {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 80vw;
+}
+
+/* Justifies text alignment and sets a max width for better readability */
+.fun-fact p, h1 {
+    text-align: justify; 
+    max-width: 80%; 
+    margin-top: 0px; 
+}
+
+/* Styles the fun fact title (these got changed with the addition of the layout.html since this header became part of a section I guess)*/
+.fun-fact h1 {
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+/* Modifies the viewing experience for mobile devices and narrow browser windows
+by making content align vertically in columns */
+@media (max-width: 650px) {
+    main{
+        overflow: none;
+    }
+
+    .main-row {
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    .main-col {
+        width: 80vw;
+
+    }
+
+    .description {
+        display: block;
+        height: auto;
+
+    }
+
+}
+
+html {
+    overflow: none; 
+}
+
+

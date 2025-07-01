@@ -1,0 +1,14 @@
+skill_id,experience_id,name,skill_level
+1,1,Managing CRM Databases,9
+2,4,Python,7
+3,4,C++,8
+4,4,C,6
+5,4,Java,3
+6,4,Creating and Selecting Algorithms and Data Structures,6
+7,4,Unix Terminal,6
+8,4,Android App Development,5
+9,4,Machine Learning,4
+10,4,Web Development,4
+11,4,Object Oriented Programming,7
+12,4,Git,5
+13,4,Calculus,5

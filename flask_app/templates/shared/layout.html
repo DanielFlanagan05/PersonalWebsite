@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./../static/main/css/header.css">
+  <link rel="stylesheet" href="./../static/main/css/footer.css">
+  <link rel="stylesheet" href="./../static/main/css/main.css">
+  <link rel="stylesheet" href="./../static/main/css/navbar.css">
+  <link rel="stylesheet" href="./../static/main/css/projects.css">
+  <link rel="stylesheet" href="./../static/main/css/resume.css">
+  <link rel="stylesheet" href="./../static/piano/css/piano.css">
+  <link rel="stylesheet" href="./../static/main/css/feedback.css">
+  <link rel="stylesheet" href="./../static/main/css/login.css">
+  <link rel="stylesheet" href="./../static/main/css/chat.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block extracss %}{% endblock %}
+  <title>Daniel Flanagan</title>
+</head>
+
+<body>
+  <div class="page-content">
+    <button id="feedbackButton">Feedback</button>
+    <!-- The header  -->
+    <header>
+      <img src="./../static/main/images/banner.jpg" alt="banner image" loading="lazy">
+    </header>
+
+    <!-- The navigation bar -->
+    <nav>
+      <div class="nav-title">
+          <!-- CSE 477 - Homework 3 -->
+          {% if user == 'Unknown' %}  
+          <p>CSE 477 - Homework 3</p>
+          {% else %}
+          <p>Logged in as {{user}}</p>
+          {% endif %}    
+
+      </div>
+  
+      <div class="nav-links">
+          <ul>
+              <li><a href="./../home">Home</a></li>
+              <li><a href="./../projects">Projects</a></li>
+              <li><a href="./../resume">Resume</a></li>
+              <li><a href="./../chat">Chat</a></li>
+              <!-- Divs for login and logout to control which is shown -->
+              <div class="login">
+                {% if user == 'Unknown' %}  
+                <li><a href="./../login">Login</a></li>
+                {% else %}
+                <li><a href="./../logout">Logout</a></li>
+                {% endif %}
+              </div>
+              <li><a href="https://www.linkedin.com/in/daniel-flanagan123/">
+                  <img src="./../static/main/images/social-linkedin.png" alt="LinkedIn" loading="lazy">
+              </a></li>
+          </ul>
+      </div>
+      <div class = "nav-links-mobile">
+          <ul>
+              <li><a href="./../home">Home</a></li>
+              <li><a href="./../projects">Projects</a></li>
+              <li><a href="./../resume">Resume</a></li>
+              <li><a href="./../chat">Chat</a></li>
+              <div class="login">
+                {% if user == 'Unknown' %}  
+                <li><a href="./../login">Login</a></li>
+                {% else %}
+                <li><a href="./../logout">Logout</a></li>
+                {% endif %}
+              </div>
+              <li><a href="https://www.linkedin.com/in/daniel-flanagan123/">LinkedIn</a></li>
+          </ul>
+      </div>
+      <div class="menu-button">
+          <img src="./../static/main/images/menu-bar.png" alt="Navigation Links Menu" loading="lazy">
+      </div>
+  </nav>
+
+    <!-- The main content  -->
+    <main>
+      {% block maincontent %}{% endblock %}
+      <form action="/processfeedback" method="post" enctype="multipart/form-data" class = "feedback-form">
+        <div>
+          <label for="name">Name:</label>
+          <input title="Enter your name" type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input title="Enter your email" type="email" id="user-email" name="email" required>
+        </div>
+        <div>
+          <label for="comment">Feedback:</label>
+          <textarea name="comment" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- The footer of the file -->
+    </div>
+    <footer>
+      <p>&copy; Daniel Flanagan </p>
+    </footer>
+
+    <!-- Note I moved all javascript here, including the extrajs block.
+    In the provided template, the extrajs block was shown in the head tag, 
+    howver to meet the general requirements of having js at the bottom I decided to move it
+    down here. Also, when looking it up I found that this should be included within the body
+    tag rather than below the html closing tag, so I hope this is the correct placement. -->
+    <script defer src="./../static/main/js/navbar.js"></script>
+    <script defer src="./../static/main/js/feedback.js"></script>
+    {% block extrajs %}{% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+

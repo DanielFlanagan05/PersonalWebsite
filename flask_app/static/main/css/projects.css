@@ -1,0 +1,49 @@
+/* Styling for the main content of projects.html */
+.page-description{
+    text-align: center; 
+    justify-content: center;
+}
+.page-description h1{
+    font-size: 2em; 
+    font-weight: normal; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 50vh;
+    text-align: justify; /* aligns horizontally by padding lines to make them all appear even length */
+    justify-content: center; /* centers content vertically */
+
+    /* Margin and padding used to add a small amount of whitespace around the text for readability */
+    margin: 0 8px;
+    padding: 0 8px;
+}
+
+/* styles the project title */
+.project-title h1 {
+    font-weight: normal;
+    margin: 0; 
+    padding: 0; 
+    text-align: justify; 
+    
+}
+
+/* Styles space below main content */
+.extra-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 80vw;
+}
+
+/* Justifies text alignment and sets a max width for better readability */
+.extra-content p {
+    text-align: justify; 
+    max-width: 80%; 
+    margin-top: 0px; 
+    font-size: 2em;
+}

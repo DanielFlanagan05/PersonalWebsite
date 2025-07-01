@@ -1,0 +1,85 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+<div class="main-content-container">
+    {% for inst_id, inst in resume_data.items() %}
+    <div class="institution-content-section">
+        <!-- The institution, its type, and the dates of it -->
+        <div class="institution">
+            <h1 class="institution">{{ inst['name'] }}</h1>
+            <p class="institution-info">
+                <!-- Doesn't display NULL and removes commas if followed by NULL and
+                is the last item on the line -->
+                {% if inst['department'] not in [None, 'NULL'] %}
+                {{ inst['department'] }}
+                {% if inst['address'] not in [None, 'NULL'] or inst['city'] not in [None, 'NULL'] or inst['state'] not in [None, 'NULL'] or inst['zip'] not in [None, 'NULL'] %}, {% endif %}
+            {% endif %}
+            {% if inst['address'] not in [None, 'NULL'] %}
+                {{ inst['address'] }}
+                {% if inst['city'] not in [None, 'NULL'] or inst['state'] not in [None, 'NULL'] or inst['zip'] not in [None, 'NULL'] %}, {% endif %}
+            {% endif %}
+            {% if inst['city'] not in [None, 'NULL'] %}
+                {{ inst['city'] }}
+                {% if inst['state'] not in [None, 'NULL'] or inst['zip'] not in [None, 'NULL'] %}, {% endif %}
+            {% endif %}
+            {% if inst['state'] not in [None, 'NULL'] %}
+                {{ inst['state'] }}
+                {% if inst['zip'] not in [None, 'NULL'] %}, {% endif %}
+            {% endif %}
+            {% if inst['zip'] not in [None, 'NULL'] %}
+                {{ inst['zip'] }}
+            {% endif %}
+            </p>
+        </div>
+        <div class="position">
+            {% for pos_id, pos in inst['positions'].items() %}
+            <div class="position-info">
+                <div class="position-title">
+                    <h2>Position: {{ pos['title'] }}</h2>
+                </div>
+                <div class="position-date">
+                    <p>
+                        Date: 
+                        {% if pos['start_date'] %}{{ pos['start_date'] }}{% endif %}
+                        {% if pos['end_date'] %} - {{ pos['end_date'] }}{% else %} - Present{% endif %}
+                    </p>
+                </div>
+                <div class="responsibilities">
+                    <p>Job Description: {{ pos['responsibilities'] }}</p>
+                </div>
+                <div class="experiences-header"> <h1>Experiences:</h1> </div>
+                {% for exp_id, exp in pos['experiences'].items() %}
+                <div class="experiences-and-skills">
+                    {% if exp['hyperlink'] not in [None, 'NULL'] %}
+                    <a href="{{ exp['hyperlink'] }}" target="_blank">{{ exp['name'] }}</a>
+                    {% else %}
+                    {{ exp['name'] }}
+                    {% endif %}
+                    <div class="experience-description">
+                        <p>
+                            <li>
+                                {{ exp['description'] }}
+                            </li>
+                        </p>
+                    </div>
+                    <div class="skills">
+                        {% if exp['skills'] %}
+                        <ul><h1>Skills:</h1>
+                            {% for skill_id, skill in exp['skills'].items() %}
+                            <li>{{ skill['name'] }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

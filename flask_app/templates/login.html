@@ -1,0 +1,20 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<br><br>
+<form id="loginForm" method="post">
+    <div class="login-box">
+        <p class="login-status" id="loginStatus"></p> <!-- Displays errors when attempting to login -->
+        <h1 class="login-title">Login</h1>
+        <hr class="login-line">
+        <input title="Enter a valid email address" class="login-input" id="email" type="email" placeholder="Your Email" required/>
+        <input title="Enter your password" class="login-input" id="password" type="password" placeholder="Your Password" required/>
+        <button class="login-button" id="loginButton">Login</button>
+    </div>
+</form>
+{% endblock %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="./../static/main/js/login.js"></script>
+{% endblock %}

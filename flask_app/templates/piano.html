@@ -1,0 +1,54 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<div class="instructions">
+    <p>Behold piano great and old, 
+        it's master slumbers in far off cold. If you wish to see anew,
+        call out to it - we see you.</p>
+</div>
+<hr>
+<div class="piano">
+    <div class = "cthulu"><img src="./../static/piano/images/texture.jpeg" alt="Cthulu Image" loading="lazy"></div>
+    <div class = "cthulu-message"> <p>I Have Awoken</p></div>
+    <div class="piano-header">The Great Old One</div>
+    <div class="piano-keys">
+        <div class="white-keys white-key1">
+            <p>A</p>
+            <div class="black-keys black-key1"><p>W</p></div>
+        </div>
+        <div class="white-keys white-key2">
+            <p>S</p>
+            <div class="black-keys black-key2"><p>E</p></div>
+        </div>
+        <div class="white-keys white-key3">
+            <p>D</p>
+        </div>
+        <div class="white-keys white-key4">
+            <p>F</p>
+            <div class="black-keys black-key3"><p>T</p></div>
+        </div>
+        <div class="white-keys white-key5">
+            <p>G</p>
+            <div class="black-keys black-key4"><p>Y</p></div>
+        </div>
+        <div class="white-keys white-key6">
+            <p>H</p>
+            <div class="black-keys black-key5"><p>U</p></div>
+        </div>
+        <div class="white-keys white-key7">
+            <p>J</p>
+        </div>
+        <div class="white-keys white-key8">
+            <p>K</p>
+            <div class="black-keys black-key6"><p>O</p></div>
+        </div>
+        <div class="white-keys white-key9">
+            <p>L</p>
+            <div class="black-keys black-key7"><p>P</p></div>
+        </div>
+        <div class="white-keys white-key10"><p>;</p></div>
+    </div>
+</div>
+<script defer src="./../static/piano/js/piano.js"></script>
+{% endblock %}
+

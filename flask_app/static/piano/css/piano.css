@@ -1,0 +1,117 @@
+/* Creates a flex box for the piano, and the background for it */
+.piano {
+    background-color: #333;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: max-content;
+    position: relative;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles the words on the piano */
+.piano-header {
+    text-align: center;
+    color: white;
+    font-family: "Old English Text MT", serif;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Creates a more compact flex box for the piano keys. */
+.piano-keys {
+    display: flex;
+    position: relative;
+    height: 250px;
+
+    z-index: 1;
+}
+
+/* Creates the white piano keys*/
+.piano-keys *{
+    background-color: #fff;
+    width: 40px;
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+/* Creates the black piano keys */
+.black-keys {
+    display: flex;
+    position: absolute;
+    height: 60%;
+    width: 22px;
+    margin-left: 29px;
+    top: 0;
+    z-index: 2;
+    background-color: #000;
+}
+
+/* Centers the leters on the keys and places them at the bottom */
+.piano-keys p {
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: center;
+    font-size: 1.3em;
+    color: #000;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    background: none;
+}
+
+/* Adjusts color and location of letters on black keys */
+.black-keys p {
+    color: #fff;
+    position: relative;
+    margin-top: 550%;
+}
+
+.cthulu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: 0; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+    z-index: 3;
+    display: none;
+}
+
+.cthulu img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.cthulu-message {
+    color: #fff;
+    font-size: 2em;
+    display: none;
+    position: absolute;
+    z-index: 4;
+    bottom: 75%;
+}
+
+.piano-keys *, .black-keys {
+    transition: background-color 0.5s ease, border 0.5s ease;
+}
+
+.instructions{
+    text-align: center; 
+    justify-content: center;
+    font-style: italic; /* Added to italicize the instructions */
+}

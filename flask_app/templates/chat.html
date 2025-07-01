@@ -1,0 +1,27 @@
+{% extends 'shared/layout.html' %}
+
+
+{% block maincontent %}
+<div class="chat-box">
+    <div class="chat-title">Chat</div>
+    <hr class="chat-line">
+
+    <!-- Chat area where messages are displayed -->
+    <div class="chat-display" id='chat' contenteditable>    
+    </div>
+
+    <!-- Called action row since all user actions are within this -->
+    <p class="action-row">
+        <button class="leave-button chat-button" id="leaveButton">Leave</button>
+        <input title="Enter your chat message" class = "chat-input" placeholder="Enter Your Message Here" />
+        <button class="send-button chat-button" id="sendButton"><img src="./../static/main/images/sendarrow.png" alt="Send Button" loading="lazy"></button>
+    </p>
+</div>
+
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+<script defer src="./../static/main/js/chat.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
