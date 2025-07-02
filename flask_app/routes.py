@@ -113,8 +113,8 @@ def root():
 @app.route('/home')
 def home():
 	print(db.query('SELECT * FROM users'))
-	x = random.choice(['I\'ve been to 1 of the 4 green sand beaches in the world','I design and print 3D models','I own a tablet with a GPU'])
-	return render_template('home.html', user=getUser(), fun_fact = x)
+	x = random.choice(['I\'m learning CAD to create 3D models','I\'m learning how to speak Urdu','I\'m learning more about AI integration into applications','I\'m learning more about new web development techniques'])
+	return render_template('home.html', user=getUser(), learning_now = x)
 
 @app.route("/static/<path:path>")
 def static_dir(path):
