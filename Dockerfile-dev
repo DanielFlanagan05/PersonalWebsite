@@ -1,10 +1,10 @@
-# Author  : Prof. MM Ghassemi <ghassem3@msu.edu>
-# Access instance using `docker exec -it hw3-container_flask-app bash`
+# Authors  : Prof. MM Ghassemi <ghassem3@msu.edu>, Daniel Flanagan
+# Access instance using `docker exec -it personal-website bash`
 
 # Instantiate Ubuntu 20.04
 FROM ubuntu:20.04
-LABEL maintainer "Mohammad Ghassemi <ghassem3@msu.edu>"
-LABEL description="This is custom Docker Image for Dr. Ghassemi's Web Application Course"
+LABEL maintainer "Daniel Flanagan <flanagandaniel05@gmail.com>"
+LABEL description="This is custom Docker Image originally from Dr. Ghassemi's Web Application Course and modified for Daniel Flanagan's personal website"
 
 # Update Ubuntu Software repository
 RUN apt update
